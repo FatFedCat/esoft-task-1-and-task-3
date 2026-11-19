@@ -1,0 +1,65 @@
+*{
+    margin:0;
+    padding:0;
+}
+:root{
+    --bg-page:#f1f5f8;
+    --house-bg:#8B4513;
+    --roof-bg:#A52A2A;
+    --chimney-bg:#708090;
+    --window-bg:#ADD8E6;
+    --door-bg:#654321;}
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: var(--bg-page);
+}
+.house {
+    position: relative;
+    width: 200px;
+    height: 150px;
+    background: var(--house-bg);
+    border-radius: 10px;
+}
+.roof {
+    position: absolute;
+    top: -95px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 100px solid var(--roof-bg);
+    border-radius: 0 0 10px 10px;
+    z-index: 2;
+}
+.chimney {
+    position: absolute;
+    top: -80px;
+    left: 140px;
+    width: 30px;
+    height: 80px;
+    background: var(--chimney-bg);
+    border-radius: 3px;
+    z-index: 1;
+}
+.window {
+    position: absolute;
+    top: 5px;
+    left: 75px;
+    width: 50px;
+    height: 50px;
+    background: var(--window-bg);
+    border-radius: 50%;
+}
+.door {
+    position: absolute;
+    bottom: 0;
+    left: 75px;
+    width: 50px;
+    height: 80px;
+    background: var(--door-bg);
+    border-radius: 0 0 5px 5px;
+}
